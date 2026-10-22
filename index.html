@@ -4,55 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Isaac · Juegos / Games</title>
+<meta name="description" content="Juegos para Android de Isaac: Little Excavator, Lunar Eagle, Hyper Laps y Guiñote. / Android games by Isaac.">
 <link rel="icon" href="little-excavator/icon.png">
 <style>
-  :root { --bg: #14121a; --text: #e6e2ee; --muted: #a9a3b8; --yellow: #ffd34d; --cyan: #7fdbff; }
+  :root { --bg: #14121a; --card: #1e1b27; --line: #2f2b3d; --text: #e6e2ee; --muted: #a9a3b8; --yellow: #ffd34d; --cyan: #7fdbff; }
+  * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 48px 16px; text-align: center; }
-  .games { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-top: 24px; }
-  .game { width: 300px; }
-  img { width: 128px; height: 128px; image-rendering: pixelated; border-radius: 28px; }
-  h1 { color: var(--yellow); margin: 0 0 8px; }
-  h2 { color: var(--yellow); margin: 16px 0 4px; letter-spacing: .02em; }
-  p { margin: 4px 0; }
-  .sub { color: var(--cyan); }
-  .links { margin-top: 12px; color: var(--muted); }
-  a { color: var(--cyan); }
+  main { max-width: 980px; margin: 0 auto; padding: 56px 16px 64px; }
+  .top { text-align: center; margin-bottom: 40px; }
+  h1 { color: var(--yellow); font-size: 2.2rem; margin: 0; letter-spacing: .03em; }
+  .top p { color: var(--muted); margin: 6px 0 0; }
+  .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .game { --accent: var(--cyan); display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 18px; padding: 24px; transition: transform .15s, border-color .15s; }
+  .game:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .head { display: flex; align-items: center; gap: 16px; }
+  .head img { width: 88px; height: 88px; flex: none; border-radius: 22px; image-rendering: pixelated; box-shadow: 0 6px 18px rgb(0 0 0 / .35); }
+  .head img.smooth { image-rendering: auto; }
+  h2 { margin: 0; font-size: 1.35rem; line-height: 1.2; }
+  .tag { display: inline-block; margin-top: 6px; color: var(--accent); font-size: .9rem; font-weight: 600; }
+  .desc { margin: 16px 0; flex: 1; }
+  .desc span { display: block; color: var(--muted); font-size: .92rem; margin-top: 4px; }
+  .links a { display: inline-block; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 10px; color: var(--accent); text-decoration: none; font-size: .9rem; }
+  .links a:hover { background: var(--accent); color: var(--bg); }
+  footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 48px; }
+  footer a { color: var(--cyan); }
+  @media (max-width: 420px) {
+    h1 { font-size: 1.8rem; }
+    .head img { width: 72px; height: 72px; border-radius: 18px; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Juegos / Games</h1>
-  <div class="games">
-    <div class="game">
-      <img src="little-excavator/icon.png" alt="Little Excavator">
-      <h2>Little Excavator</h2>
-      <p class="sub">Excava, carga y construye · Dig, load and build</p>
-      <p>Juego pixel-art relajante de excavadoras para Android. / Relaxing pixel-art digger game for Android.</p>
-      <p class="links"><a href="little-excavator/privacy.html">Política de privacidad / Privacy Policy</a></p>
-    </div>
-    <div class="game">
-      <img src="lunar-eagle/icon.png" alt="Lunar Eagle">
-      <h2>Lunar Eagle</h2>
-      <p class="sub">Módulo lunar · Misión Apolo</p>
-      <p>Juego pixel-art de alunizaje para Android. / Pixel-art Moon landing game for Android.</p>
-      <p class="links"><a href="lunar-eagle/privacy.html">Política de privacidad / Privacy Policy</a></p>
-    </div>
-    <div class="game">
-      <img src="hyper-laps/icon.png" alt="Hyper Laps">
-      <h2>Hyper Laps</h2>
-      <p class="sub">Carreras con amigos · Race your friends</p>
-      <p>Juego pixel-art de carreras vistas desde arriba para Android. / Top-down pixel-art racing game for Android.</p>
-      <p class="links"><a href="hyper-laps/privacy.html">Política de privacidad / Privacy Policy</a></p>
-    </div>
-    <div class="game">
-      <img src="guinote/icon.png" alt="Guiñote" style="image-rendering: auto">
-      <h2>Guiñote</h2>
-      <p class="sub">Juego de cartas · Card game</p>
-      <p>El clásico juego de cartas aragonés, contra la CPU u online. / The classic Spanish card game, against the CPU or online.</p>
-      <p class="links"><a href="guinote/privacidad.html">Política de privacidad / Privacy Policy</a></p>
-    </div>
+  <div class="top">
+    <h1>Juegos / Games</h1>
+    <p>Juegos para Android · Android games</p>
   </div>
+
+  <div class="games">
+    <article class="game" style="--accent: #ffb02e">
+      <div class="head">
+        <img src="little-excavator/icon.png" alt="Little Excavator">
+        <div><h2>Little Excavator</h2><span class="tag">Excava, carga y construye · Dig, load and build</span></div>
+      </div>
+      <p class="desc">Juego pixel-art relajante de excavadoras.<span>Relaxing pixel-art digger game.</span></p>
+      <p class="links"><a href="little-excavator/privacy.html">Política de privacidad / Privacy Policy</a></p>
+    </article>
+
+    <article class="game" style="--accent: #c9c3ff">
+      <div class="head">
+        <img src="lunar-eagle/icon.png" alt="Lunar Eagle">
+        <div><h2>Lunar Eagle</h2><span class="tag">Módulo lunar · Misión Apolo</span></div>
+      </div>
+      <p class="desc">Juego pixel-art de alunizaje.<span>Pixel-art Moon landing game.</span></p>
+      <p class="links"><a href="lunar-eagle/privacy.html">Política de privacidad / Privacy Policy</a></p>
+    </article>
+
+    <article class="game" style="--accent: #3ae0ff">
+      <div class="head">
+        <img src="hyper-laps/icon.png" alt="Hyper Laps">
+        <div><h2>Hyper Laps</h2><span class="tag">Carreras con amigos · Race your friends</span></div>
+      </div>
+      <p class="desc">Juego pixel-art de carreras vistas desde arriba.<span>Top-down pixel-art racing game.</span></p>
+      <p class="links"><a href="hyper-laps/privacy.html">Política de privacidad / Privacy Policy</a></p>
+    </article>
+
+    <article class="game" style="--accent: #4fc97a">
+      <div class="head">
+        <img class="smooth" src="guinote/icon.png" alt="Guiñote">
+        <div><h2>Guiñote</h2><span class="tag">Juego de cartas · Card game</span></div>
+      </div>
+      <p class="desc">El clásico juego de cartas aragonés, contra la CPU u online.<span>The classic Spanish card game, against the CPU or online.</span></p>
+      <p class="links"><a href="guinote/privacidad.html">Política de privacidad / Privacy Policy</a></p>
+    </article>
+  </div>
+
+  <footer>Contacto / Contact: <a href="mailto:ruizcis.dev@gmail.com">ruizcis.dev@gmail.com</a></footer>
 </main>
 </body>
 </html>
