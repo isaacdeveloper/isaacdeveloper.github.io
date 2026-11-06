@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Isaac · Juegos / Games</title>
-<meta name="description" content="Juegos para Android de Isaac: Little Excavator, Lunar Eagle, Hyper Laps, Guiñote y Red Ace Rising. / Android games by Isaac.">
+<title>Isaac · Juegos y apps / Games &amp; apps</title>
+<meta name="description" content="Juegos y apps para Android de Isaac: Red Ace Rising, Little Excavator, Lunar Eagle, Hyper Laps, Guiñote y Tapscad. / Android games and apps by Isaac.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -32,6 +32,7 @@
   .links a.play { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--bg); font-weight: 700; }
   .links a.play:hover { filter: brightness(1.12); }
   .links a.play svg { width: 16px; height: 16px; fill: currentColor; }
+  h2.section { color: var(--yellow); font-size: 1.6rem; text-align: center; margin: 48px 0 24px; letter-spacing: .03em; }
   footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 48px; }
   footer a { color: var(--cyan); }
   @media (max-width: 420px) {
@@ -44,10 +45,19 @@
 <main>
   <div class="top">
     <h1>Juegos / Games</h1>
-    <p>Juegos para Android · Android games</p>
+    <p>Juegos y apps para Android · Android games &amp; apps</p>
   </div>
 
   <div class="games">
+    <article class="game" style="--accent: #d9574c">
+      <div class="head">
+        <img class="smooth" src="red-ace-rising/icon.png" alt="Red Ace Rising">
+        <div><h2>Red Ace Rising</h2><span class="tag">Combate aéreo · 1914–1918 · WWI dogfights</span></div>
+      </div>
+      <p class="desc">Combate aéreo 3D de la Primera Guerra Mundial.<span>3D World War I air combat game.</span></p>
+      <p class="links"><a class="play" href="https://play.google.com/store/apps/details?id=com.redacerising.game" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Google Play</a><a href="red-ace-rising/privacy.html">Política de privacidad / Privacy Policy</a></p>
+    </article>
+
     <article class="game" style="--accent: #ffb02e">
       <div class="head">
         <img src="little-excavator/icon.png" alt="Little Excavator">
@@ -83,14 +93,17 @@
       <p class="desc">El clásico juego de cartas aragonés, contra la CPU u online.<span>The classic Spanish card game, against the CPU or online.</span></p>
       <p class="links"><a class="play" href="https://play.google.com/store/apps/details?id=com.guinote.game" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Google Play</a><a href="guinote/privacidad.html">Política de privacidad / Privacy Policy</a></p>
     </article>
+  </div>
 
-    <article class="game" style="--accent: #d9574c">
+  <h2 class="section">Apps</h2>
+  <div class="games">
+    <article class="game" style="--accent: #f2c94c">
       <div class="head">
-        <img class="smooth" src="red-ace-rising/icon.png" alt="Red Ace Rising">
-        <div><h2>Red Ace Rising</h2><span class="tag">Combate aéreo · 1914–1918 · WWI dogfights</span></div>
+        <img class="smooth" src="tapscad/icon.png" alt="Tapscad">
+        <div><h2>Tapscad</h2><span class="tag">Editor de .scad · .scad editor</span></div>
       </div>
-      <p class="desc">Combate aéreo 3D de la Primera Guerra Mundial.<span>3D World War I air combat game.</span></p>
-      <p class="links"><a href="red-ace-rising/privacy.html">Política de privacidad / Privacy Policy</a></p>
+      <p class="desc">Abre, edita y renderiza tus archivos .scad de OpenSCAD y míralos en 3D.<span>Open, edit and render your OpenSCAD .scad files and view them in 3D.</span></p>
+      <p class="links"><a class="play" href="https://play.google.com/store/apps/details?id=com.tapscad.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Google Play</a><a href="tapscad/privacy.html">Política de privacidad / Privacy Policy</a></p>
     </article>
   </div>
 
